@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_03_050409) do
+ActiveRecord::Schema.define(version: 2022_01_05_085354) do
 
   create_table "authors", force: :cascade do |t|
     t.string "first_name"
@@ -77,6 +77,23 @@ ActiveRecord::Schema.define(version: 2022_01_03_050409) do
 
   create_table "suppliers", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "phone_no"
+    t.string "alt_phone_no"
+    t.string "email"
+    t.string "alt_email"
+    t.string "address"
+    t.string "adhaar_no"
+    t.string "pan_no"
+    t.string "bio"
+    t.string "password"
+    t.integer "user_type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
