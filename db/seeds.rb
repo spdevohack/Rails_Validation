@@ -46,15 +46,15 @@
 # {date_submitted: "16:00:00", status: 0, subtotal: 799, shipping: 50, tax: 50, total: 899, customer_id: 10} ])
 
 
-Review.create([{title: "Books Review", body: "I should say this book is very good.", rating: 4, state: 0, customer_id: 2, book_id:2},
-{title: "Books Reviewed", body: "Very good", rating: 4.5, state: 1, customer_id: 4, book_id:1},
-{title: "Books Review", body: "Not so good", rating: 3, state:2, customer_id: 1, book_id:3},
-{title: "Books Review", body: "Not Good as Expected", rating: 3, state: 1, customer_id: 6, book_id:4},
-{title: "Books Review", body: "Its very good", rating: 5, state: 0, customer_id: 7, book_id:5},
-{title: "Books Review", body: "it Bad", rating: 1, state: 0, customer_id: 8, book_id:2},
-{title: "Books Review", body: "Its very good", rating: 5, state: 1, customer_id: 10, book_id:3},
-{title: "Books Review", body: "Not good or not bad", rating: 3, state: 2, customer_id: 5, book_id:4},
-{title: "Books Review", body: "Its very good", rating: 5, state: 0, customer_id: 7, book_id:5},
-{title: "Books Review", body: "Its very good", rating: 4, state:1, customer_id: 3, book_id:3},
-{title: "Books Review", body: "Its very good", rating: 5, state: 0, customer_id: 7, book_id:5},
-{title: "Books Review", body: "Its very good", rating: 4, state: 1, customer_id: 5, book_id:2}])
+# Review.create([{title: "Books Review", body: "I should say this book is very good.", rating: 4, state: 0, customer_id: 2, book_id:2},
+# {title: "Books Reviewed", body: "Very good", rating: 4.5, state: 1, customer_id: 4, book_id:1},
+# {title: "Books Review", body: "Not so good", rating: 3, state:2, customer_id: 1, book_id:3},
+# {title: "Books Review", body: "Not Good as Expected", rating: 3, state: 1, customer_id: 6, book_id:4},
+# {title: "Books Review", body: "Its very good", rating: 5, state: 0, customer_id: 7, book_id:5},
+# {title: "Books Review", body: "it Bad", rating: 1, state: 0, customer_id: 8, book_id:2},
+# {title: "Books Review", body: "Its very good", rating: 5, state: 1, customer_id: 10, book_id:3},
+# {title: "Books Review", body: "Not good or not bad", rating: 3, state: 2, customer_id: 5, book_id:4},
+# {title: "Books Review", body: "Its very good", rating: 5, state: 0, customer_id: 7, book_id:5},
+# {title: "Books Review", body: "Its very good", rating: 4, state:1, customer_id: 3, book_id:3},
+# {title: "Books Review", body: "Its very good", rating: 5, state: 0, customer_id: 7, book_id:5},
+# {title: "Books Review", body: "Its very good", rating: 4, state: 1, customer_id: 5, book_id:2}])

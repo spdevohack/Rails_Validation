@@ -10,5 +10,8 @@ class Book < ApplicationRecord
 	scope :out_of_print_and_expensive, -> {out_of_print.where('price > 500')}
 	scope :costs_more_than, -> (amount) {where('price > ?', amount) }
 
+	# validates :isbn, format: { with: /^"([A-Z0-9]+\-*)+[A-Z0-9]"$/, message: "Not Match the pattern", :multiline => true}
+	
+	validates :title, length: { maximum: 50}
 
 end
