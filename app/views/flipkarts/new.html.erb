@@ -1,0 +1,142 @@
+<h1 class="text-center">Fill User Detail </h1>
+
+
+
+<%= render "form" %>
+
+
+
+
+<br> 
+
+<script type="text/javascript">
+	
+var regName = /^[a-zA-Z\s]{3,}$/
+var regPhone = /^[0-9]{10}$/
+var regEmail = /^[A-Za-z0-9]+(\.[A-Za-z0-9]+)?@[A-z]+\.(com|org|in)?$/
+var regAadhar = /^\d{4}\-\d{4}\-\d{4}$/
+var regPan  = /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/
+var regPassword = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{6,}$/
+
+
+
+var inputArray = document.querySelectorAll(".input");
+
+console.log(inputArray);
+
+
+
+var regArray = [regName, regName,  regPhone, regPhone, regEmail, regEmail, regAadhar, regPan, regPassword];
+
+var alertArray = ["name must be character and minimum of 3 length", "last name must be character and minimum of 3 length", "enter valid phone number", "enter valid alternate phone number", "Enter valid email", "Enter valid alternate email", "enter Valid Aadhar no. (1233-2312-2312)", "Enter valid Pan (ASDFE3245A)", "password must be greater than 6 character, conatin onespecial symbol and one number" ];
+
+var array = [];
+
+var submit = document.querySelector("#submit-btn");
+submit.addEventListener("click", check);
+
+function check() {
+  console.log(inputArray[0].value)
+  // console.log(inputArray[1].value)
+  for (var i = 0; i < inputArray.length; i++) {
+    array.push(inputArray[i].value);
+    console.log(array);
+    // console.log(array[i]);
+    // console.log(inputArray[i].value.types);
+    // console.log(regArray[i]);
+    if ( !regArray[i].test(array[i]) &&  array[i] != "") {
+      alert(alertArray[i]);
+      console.log(array[i]);
+      console.log(alertArray[i]);
+      break;
+    }
+    else if (array[i] == "") {
+      alert("please fill the form");
+      console.log(array.length);
+      break;
+    }
+  }
+
+  
+  
+
+
+
+
+
+
+  // any strng that match regpassword can't be taken as password
+  // var regPassword = /^(.{0,7}|[^0-9]*|[^A-Z]*|[^a-z]*|[a-zA-Z0-9]*)$/
+  // var fnameIcon = document.getElementById('fname-icon');
+  // var lnameIcon = document.getElementById('lname-icon');
+  // var emailIcon = document.getElementById('email-icon');
+  // var phoneIcon = document.getElementById('phone-icon');
+  // var birthIcon = document.getElementById('birth-icon');
+  // var passwordIcon = document.getElementById('password-icon');
+  // var confirmPasswordIcon = document.getElementById('confirm-password-icon');
+    // // for first name
+  // var firstName = document.getElementById("fname").value;
+  // console.log(firstName);
+  // if (!regName.test(firstName)) {
+  //   fnameIcon.classList.remove('fn-hide');
+  //   // fnameIcon.setAttribute("title", "name must be character");
+  //   alert("nmae must be character");
+  //   console.log(1);
+  // };
+  // // for last name
+  // var lastName = document.getElementById("lname").value;
+  // console.log(lastName);
+  // if (!regName.test(lastName)) {
+  //   lnameIcon.classList.remove('ln-hide');
+  //   // lnameIcon.setAttribute("title", "name must be character");
+  //   alert("nmae must be character");
+  //   console.log(1);
+  // }
+  // // for email
+  // var email = document.getElementById("email").value;
+  // console.log(email);
+  // if (!regEmail.test(email)) {
+  //   emailIcon.classList.remove('email-hide');
+  //   // emailIcon.setAttribute("title", "enter valid email address");
+  //   alert("enter valid email address");
+  //   console.log(1);
+  // }
+  // //for phone
+  // var phone = document.getElementById("phone").value;
+  // console.log(phone);
+  // if (!regPhone.test(phone) && phone.length != 10) {
+  //   phoneIcon.classList.remove('phone-hide');
+  //   // phoneIcon.setAttribute("title", "enter valid phone number");
+  //   alert("phone number must be valid");
+  //   console.log(1);
+  // }
+  // //for date of birth
+  // var birthDate = document.getElementById("birth").value;
+  // console.log(birthDate);
+  // if (birthDate == "") {
+  //   birthIcon.classList.remove('birth-hide');
+  //   // birthIcon.setAttribute("title", "Please enter date of birth");
+  //   alert("enter date of birth");
+  //   console.log(1);
+  // }
+  // //for password
+  // var password = document.getElementById("password").value;
+  // console.log(password);
+  // if (regPassword.test(password)) {
+  //   passwordIcon.classList.remove('password-hide');
+  //   // passwordIcon.setAttribute("title", "password must be greater than 8 character, conatin one ial symbol and one number");
+  //   alert("password must be greater than 8 character, conatin one special symbol and one number");
+  //   console.log(1);
+  // }
+  // //for confirm pasword
+  // var confirmPassword = document.getElementById("cpassword").value;
+  // console.log(confirmPassword);
+  // if (confirmPassword != password) {
+  //   confirmPasswordIcon.classList.remove('cpassword-hide');
+  //   // confirmPasswordIcon.setAttribute("title", "password must be same");
+  //   alert("password must be same");
+  //   console.log(1);
+  // }
+ }
+
+</script>

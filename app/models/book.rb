@@ -1,6 +1,13 @@
 class Book < ApplicationRecord
 	belongs_to :supplier
-	belongs_to :author
+	belongs_to :author, touch: true
+
+	# rails callback
+	
+	after_touch do 
+		puts "BOOK was touch by someone"
+	end
+
 	has_many :reviews
 	has_and_belongs_to_many :orders
 

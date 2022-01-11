@@ -1,0 +1,52 @@
+<h1 class="text-center"> User Database </h1>
+<br>
+<table>
+	<tr>
+		<th class="border-1 p-2 ">First Name </th>
+		<th class="border-1 p-2 ">Last Name</th>
+		<th class="border-1 p-2 ">Phone No.</th>
+		<th class="border-1 p-2 ">Alternate Phone No.</th>
+		<th class="border-1 p-2 ">Email</th>
+		<th class="border-1 p-2 ">Alternate Email</th>
+		<th class="border-1 p-2 ">Address</th>
+		<th class="border-1 p-2 ">Bio</th>
+		<th class="border-1 p-2 ">User Type</th>
+		<th class="border-1 p-2 ">Pan No.</th>
+		<th class="border-1 p-2 ">Aadhar No.</th>
+		<th colspan="3"></th>
+	
+
+
+		
+		<!-- <th></th>
+		<th></th>	
+		<th></th> -->
+	</tr>
+	<% @users.each do |user| %>
+	<tr>
+	  <td class="border-1 p-2 "> <%= user.first_name %> </td>
+		<td class="border-1 p-2 "><%= user.last_name %></td>
+		<td class="border-1 p-2 "><%= user.phone_no %></td>
+		<td class="border-1 p-2 "><%= user.alt_phone_no %></td>
+		<td class="border-1 p-2 "><%= user.email %></td>
+		<td class="border-1 p-2 "><%= user.alt_email %></td>
+		<td class="border-1 p-2 "><%= user.address %></td>
+		<td class="border-1 p-2 "><%= user.bio %></td>
+		<td class="border-1 p-2 "><%= user.user_type %></td>
+		<td class="border-1 p-2 "><%= user.pan_no %></td>
+		<td class="border-1 p-2 "><%= user.adhaar_no %></td>
+		<td colspan="3">
+		<td class="border-1 p-2 "><%= button_to 'delete', flipkart_path(user), method: :delete %></td>
+		<td class="border-1 p-2 "><%= button_to 'show', flipkart_path(user), method: :get %></td>
+		<td class="border-1 p-2 "><%= button_to 'edit', edit_flipkart_path(user), method: :get%></td>
+		</td>
+
+
+	</tr>	
+	<% end %>
+
+<caption class="text-center"> Table:1 User_details</caption>
+
+</table>
+
+<%= link_to 'Add New User', 'flipkarts/new', class:"btn btn-primary mx-2"%>

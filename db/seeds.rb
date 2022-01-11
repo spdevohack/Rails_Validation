@@ -57,4 +57,4 @@
 # {title: "Books Review", body: "Its very good", rating: 5, state: 0, customer_id: 7, book_id:5},
 # {title: "Books Review", body: "Its very good", rating: 4, state:1, customer_id: 3, book_id:3},
 # {title: "Books Review", body: "Its very good", rating: 5, state: 0, customer_id: 7, book_id:5},
-# {title: "Books Review", body: "Its very good", rating: 4, state: 1, customer_id: 5, book_id:2}])
+# {title: "Books Review", body: "Its very good", rating: 4, state: 1, customer_id: 5, book_id:2}])migra

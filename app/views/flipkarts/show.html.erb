@@ -1,0 +1,35 @@
+<h1 class="text-center">Show  User Database </h1>
+<br>
+<table>
+	<tr>
+		<th class="border-1 p-2 ">First Name </th>
+		<th class="border-1 p-2 ">Last Name</th>
+		<th class="border-1 p-2 ">Phone No.</th>
+		<th class="border-1 p-2 ">Alternate Phone No.</th>
+		<th class="border-1 p-2 ">Email</th>
+		<th class="border-1 p-2 ">Alternate Email</th>
+		<th class="border-1 p-2 ">Address</th>
+		<th class="border-1 p-2 ">Bio</th>
+		<th class="border-1 p-2 ">User Type</th>
+		<th class="border-1 p-2 ">Pan No.</th>
+		<th class="border-1 p-2 ">Aadhar No.</th>	
+	</tr>
+		<tr>
+		<th class="border-1 p-2 "><%=  @user.first_name%> </th>
+		<th class="border-1 p-2 "><%= @user.last_name %> </th>
+		<th class="border-1 p-2 "><%= @user.phone_no%> </th>
+		<th class="border-1 p-2 "><%= @user.alt_phone_no%> </th>
+		<th class="border-1 p-2 "><%= @user.email%> </th>
+		<th class="border-1 p-2 "><%= @user.alt_email%> </th>
+		<th class="border-1 p-2 "><%= @user.address%> </th>
+		<th class="border-1 p-2 "><%= @user.bio%> </th>
+		<th class="border-1 p-2 "><%= @user.user_type%> </th>
+		<th class="border-1 p-2 "><%= @user.pan_no%> </th>
+		<th class="border-1 p-2 "> <%= @user.adhaar_no %> </th>	
+	</tr>
+
+</table>
+<br>
+
+<%= link_to 'Back', flipkarts_path , class:"btn btn-primary"%>
+<%= link_to 'Edit', edit_flipkart_path(@user) , class:"btn btn-primary" %>
